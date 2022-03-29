@@ -212,6 +212,13 @@ const App = () => {
 						Mint
 					</button>  
 				</div>
+                               <div className='rules'>
+                                    <p>Prices & Limit</p>
+	                             3 letters cost 0.3 MATIC, 
+	                             5 letters cost 0.5 MATIC, 
+	                             others cost 0.2 MATIC, 
+	                             Limit is 10 letters
+                               </div>
 
 			</div>
 	   );
