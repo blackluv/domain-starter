@@ -1,4 +1,4 @@
-# buildspace DNS starter project
+# Learnweb3dao DNS starter project
 
 ### **Welcome 👋**
 
