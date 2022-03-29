@@ -232,7 +232,7 @@ const App = () => {
                         </div>
 						<div className="right">
 							{/*checking if the network name has the word "Polygon" in it */}
-			                <img alt="Network logo" className="logo" src={ networks.includes("Polygon") ? polygonLogo : ethLogo} />
+			                <img alt="Network logo" className="logo" src={ network.includes("Polygon") ? polygonLogo : ethLogo} />
 			                { currentAccount ? <p> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </p> : <p> Not connected </p> }
 		                </div>
 					</header>
