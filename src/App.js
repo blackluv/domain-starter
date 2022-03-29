@@ -227,7 +227,7 @@ const App = () => {
 				<div className="header-container">
 			        <header>
                         <div className="left">
-                            <p className="title">🐱‍👤 Freelance Name Service</p>
+                            <p className="title">🐱‍👤 Learnweb3dao Name Service</p>
                             <p className="subtitle">This just a test, i don't know react!</p>
                         </div>
 						<div className="right">
