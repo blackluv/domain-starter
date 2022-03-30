@@ -6,8 +6,6 @@ import contractAbi from './utils/contractABI.json';
 import polygonLogo from './assets/polygonlogo.png';
 import ethLogo from './assets/ethlogo.png';
 import { networks } from './utils/networks';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 // Constants
 const TWITTER_HANDLE = 'blackluv10';
@@ -165,7 +163,6 @@ const App = () => {
 					console.log("Record set! https://mumbai.polygonscan.com/tx/"+tx.hash);
 					// Call fetchMints after 2 seconds
 				    setTimeout(() => {
-						toast("🍄 Domain minted! ")
 					    fetchMints();
 				    }, 5000);
 					
