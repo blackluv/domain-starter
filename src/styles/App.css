@@ -17,6 +17,11 @@ p {
   justify-content: space-between;
 }
 
+.rules p{
+  font-size: 25px;
+  font-weight: 500;
+}
+
 .header-container {
   padding-top: 30px;
 }
@@ -33,11 +38,6 @@ header{
   font-size: 35px;
   font-weight: bold;
   color: white;
-}
-
-.rules p{
-  font-size: 25px;
-  font-weight: 500;
 }
 
 .subtitle {
@@ -205,7 +205,7 @@ input:focus {
 
 .tld {
   position: absolute;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   color: white;
   /* left: -70px; */
@@ -233,15 +233,15 @@ input:focus {
   border-radius: 5px;
   margin: 10px 15px;
   font-size: 18px;
-  background-color: #c4b7fa;
-  color: black;
+  background: #ffffff;
+  color: #181818;
   min-width: 150px;
   max-width: fit-content;
-  box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 10px 3px rgba(250, 248, 250, 0.2);
 }
 
 /* Different background-colour for every nth mint-item */
-.mint-item:nth-child(2n) {
+/*.mint-item:nth-child(2n) {
   background-color: lightblue;
 }
 
@@ -251,7 +251,7 @@ input:focus {
 
 .mint-item:nth-child(5n) {
   background-color: lightgreen;
-}
+}*/
 
 .link{
   color: black;
