@@ -245,7 +245,7 @@ const App = () => {
 					<p className='tld'> {tld} </p>
 				</div>
 
-				<input
+				<input className='details-input'
 					type="text"
 					value={record}
 					placeholder='Set your details'
@@ -379,7 +379,7 @@ const App = () => {
                 src={network.includes("Polygon") ? polygonLogo : ethLogo}
               />
               {currentAccount ? (
-                <p>
+                <p className='public-addr'>
                   {" "}
                   Wallet: {currentAccount.slice(0, 6)}...
                   {currentAccount.slice(-4)}{" "}

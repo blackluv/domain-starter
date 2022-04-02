@@ -271,6 +271,9 @@ input:focus {
 }
 
 @media only screen and (max-width: 768px) {
+  .App{
+    height: 1200px;
+  }
   .connect-wallet-container{
     width: 90%;
   }
@@ -320,6 +323,36 @@ input:focus {
      height: 0%;
     margin: 0 auto;
     text-align: center;
+   }
+
+   .form-container{
+     margin-top: 3rem;
+   }
+
+   .rules{
+     margin-top: 1.5rem;
+   }
+
+   .rules p{
+     margin-bottom: 1rem;
+   }
+
+   .mint-container{
+     display: flex;
+   }
+
+   .public-addr{
+     position: relative;
+     left: -2.6rem;
+     font-size: 11px;
+   }
+
+   .first-row{
+     width: 90%;
+   }
+
+   .details-input{
+     width: 80%;
    }
 
 
