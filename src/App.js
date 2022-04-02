@@ -361,36 +361,51 @@ const App = () => {
 	}, [currentAccount, network]);
 
   return (
-		<div className="App">
-			<div className="container">
-				<div className="header-container">
-					<header>
-                        <div className="left">
-                            <p className="title">🐱‍👤 learnweb3dao Name Service</p>
-                            <p className="subtitle">Your immortal API on the blockchain!</p>
-                        </div>
-						<div className="right">
-						    <img alt="Network logo" className="logo" src={ network.includes("Polygon") ? polygonLogo : ethLogo} />
-							{ currentAccount ? <p> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </p> : <p> Not connected </p> }
-						</div>
-					</header>
-				</div>
-				{!currentAccount && renderNotConnectedContainer()}
-				{currentAccount && renderInputForm()}
-				{mints && renderMints()}
+    <div className="App">
+      <div className="container">
+        <div className="header-container">
+          <header>
+            <div className="left">
+              <p className="title">
+                🐱‍👤
+                <span className='emojis'>learnweb3Dao Name Service</span>
+              </p>
+              <p className="subtitle">Your immortal API on the blockchain!</p>
+            </div>
+            <div className="right">
+              <img
+                alt="Network logo"
+                className="logo"
+                src={network.includes("Polygon") ? polygonLogo : ethLogo}
+              />
+              {currentAccount ? (
+                <p>
+                  {" "}
+                  Wallet: {currentAccount.slice(0, 6)}...
+                  {currentAccount.slice(-4)}{" "}
+                </p>
+              ) : (
+                <p> Not connected </p>
+              )}
+            </div>
+          </header>
+        </div>
+        {!currentAccount && renderNotConnectedContainer()}
+        {currentAccount && renderInputForm()}
+        {mints && renderMints()}
 
-                <div className="footer-container">
-					<img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
-					<a
-						className="footer-text"
-						href={TWITTER_LINK}
-						target="_blank"
-						rel="noreferrer"
-					>{`built with @${TWITTER_HANDLE}`}</a>
-				</div>
-			</div>
-		</div>
-	);
+        <div className="footer-container">
+          <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
+          <a
+            className="footer-text"
+            href={TWITTER_LINK}
+            target="_blank"
+            rel="noreferrer"
+          >{`built with @${TWITTER_HANDLE}`}</a>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;

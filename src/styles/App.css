@@ -1,3 +1,7 @@
+* {
+  text-transform: capitalize;
+}
+
 .App {
   height: 100vh;
   background-color: #0d1116;
@@ -264,6 +268,77 @@ input:focus {
 
 .underlined:hover{
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .connect-wallet-container{
+    width: 90%;
+  }
+
+  .left{
+    margin-left: 5%;
+  }
+
+  .right{
+    position: relative;
+    bottom: 1.5rem;
+    width: 50px;
+    margin-right: 0;
+  }
+
+  .right p{
+    position: relative;
+    right: 2.75rem;
+  }
+
+  .logo{
+    visibility: hidden;
+  }
+  
+  .headlines{
+    margin-bottom: 1rem;
+  }
+
+   .subtitle{
+     position: relative;
+     top: 4rem;
+     left: 2.5rem;
+     word-spacing: 0px;
+     width: 248px;
+     height: 0px;
+     margin: 0 auto;
+     text-align: center;
+     font-size: 20px;
+   }
+
+   .emojis{
+     position: relative;
+     top: 3rem;
+     left: 2.5rem;
+     word-spacing: 0px;
+     display: table;
+     height: 0%;
+    margin: 0 auto;
+    text-align: center;
+   }
+
+
+  /* .service-name{
+    position: relative;
+    top: 5rem;
+    left: 3rem;
+    margin: 0 auto;
+    max-width: 234px !important;
+    max-height: 83px !important;
+  }
+
+  .subtitle{
+    position: relative;
+    top: 5rem;
+    left: 3rem;
+    max-width: 243px;
+    max-height: 59px;
+  } */
 }
 
 /* KeyFrames */
