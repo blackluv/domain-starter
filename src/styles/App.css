@@ -270,6 +270,10 @@ input:focus {
   cursor: pointer;
 }
 
+.costs{
+  visibility: hidden;
+}
+
 @media only screen and (max-width: 768px) {
   .App{
     height: 1200px;
@@ -284,7 +288,7 @@ input:focus {
 
   .right{
     position: relative;
-    bottom: 1.5rem;
+    bottom: 1rem;
     width: 50px;
     margin-right: 0;
   }
@@ -302,7 +306,11 @@ input:focus {
     margin-bottom: 1rem;
   }
 
-   .subtitle{
+  .desktop-costs{
+    visibility: visible;
+  }
+
+   ._subtitle{
      position: relative;
      top: 4rem;
      left: 2.5rem;
@@ -339,6 +347,7 @@ input:focus {
 
    .mint-container{
      display: flex;
+     flex-direction: column;
    }
 
    .public-addr{
@@ -348,30 +357,42 @@ input:focus {
    }
 
    .first-row{
-     width: 90%;
+     width: 86%;
+     margin-top: 2.5rem;
+   }
+
+   .first-row input{
+     width: 100%;
    }
 
    .details-input{
      width: 80%;
    }
 
+   .tld{
+     font-size: 13px;
+     margin-bottom: 9px;
+   }
 
-  /* .service-name{
-    position: relative;
-    top: 5rem;
-    left: 3rem;
-    margin: 0 auto;
-    max-width: 234px !important;
-    max-height: 83px !important;
-  }
+   .rules{
+     display: flex;
+     flex-direction: column;
+   }
 
-  .subtitle{
+   .costs{
     position: relative;
-    top: 5rem;
-    left: 3rem;
-    max-width: 243px;
-    max-height: 59px;
-  } */
+    right: 1.3rem;
+    list-style-type: none;
+    visibility: visible;
+   }
+   
+   .desktop-costs{
+     visibility: hidden;
+     width: 0;
+     height: 0;
+   }
+
+  
 }
 
 /* KeyFrames */

@@ -226,59 +226,80 @@ const App = () => {
 		    );
 	    }
 		return (
-			<div className="form-container">
-				<div className="first-row">
-				{editing ? (<input
-						type="text"
-						value={domain}
-						placeholder='name'
-						disabled={true}
-						onChange={e => setDomain(e.target.value)}
-					/>):(
-						<input
-						type="text"
-						value={domain}
-						placeholder='name'
-						onChange={e => setDomain(e.target.value)}
-						/>
-					)}
-					<p className='tld'> {tld} </p>
-				</div>
+      <div className="form-container">
+        <div className="first-row">
+          {editing ? (
+            <input
+              type="text"
+              value={domain}
+              placeholder="name"
+              disabled={true}
+              onChange={(e) => setDomain(e.target.value)}
+            />
+          ) : (
+            <input
+              type="text"
+              value={domain}
+              placeholder="name"
+              onChange={(e) => setDomain(e.target.value)}
+            />
+          )}
+          <p className="tld"> {tld} </p>
+        </div>
 
-				<input className='details-input'
-					type="text"
-					value={record}
-					placeholder='Set your details'
-					onChange={e => setRecord(e.target.value)}
-				/>
+        <input
+          className="details-input"
+          type="text"
+          value={record}
+          placeholder="Set your details"
+          onChange={(e) => setRecord(e.target.value)}
+        />
 
-                {editing ? (
-						<div className="button-container">
-							<button className='cta-button mint-button' disabled={loading} onClick={updateDomain}>
-								Set record
-							</button>  
-							<button className='cta-button mint-button' onClick={() => {setEditing(false); setDomain('');}}>
-								Cancel
-							</button>  
-						</div>
-					) : (
-						// If editing is not true, the mint button will be returned instead
-						<button className='cta-button mint-button' disabled={loading} onClick={mintDomain}>
-							Mint
-						</button>  
-				)}
+        {editing ? (
+          <div className="button-container">
+            <button
+              className="cta-button mint-button"
+              disabled={loading}
+              onClick={updateDomain}
+            >
+              Set record
+            </button>
+            <button
+              className="cta-button mint-button"
+              onClick={() => {
+                setEditing(false);
+                setDomain("");
+              }}
+            >
+              Cancel
+            </button>
+          </div>
+        ) : (
+          // If editing is not true, the mint button will be returned instead
+          <button
+            className="cta-button mint-button"
+            disabled={loading}
+            onClick={mintDomain}
+          >
+            Mint
+          </button>
+        )}
 
-
-				<div className='rules'>
-                    <p>Prices & Limit</p>
-	                3 letters cost 0.3 MATIC, 
-	                5 letters cost 0.5 MATIC, 
-	                others cost 0.2 MATIC, 
-	                Limit is 10 letters
-                </div>
-
-			</div>
-	   );
+        <div className="rules">
+          <p>Prices & Limit</p>
+          <p className='desktop-costs'>
+            3 letters cost 0.3 MATIC, 5 letters cost 0.5 MATIC, others cost 0.2
+            MATIC, Limit is 10 letters{" "}
+          </p>
+          <ul className='costs'>
+            <li>3 letters cost 0.3 MATIC</li>
+            <li>5 letters or more cost 0.5 MATIC</li>
+            <li>Others letters cost 0.2 MATIC</li>
+			<li>Limit is 10 letters</li>
+          </ul>
+        </div>
+      </div>
+    );
 	};
 
 	const fetchMints = async () => {
@@ -370,7 +391,7 @@ const App = () => {
                 🐱‍👤
                 <span className='emojis'>learnweb3Dao Name Service</span>
               </p>
-              <p className="subtitle">Your immortal API on the blockchain!</p>
+              <p className="_subtitle">Your immortal API on the blockchain!</p>
             </div>
             <div className="right">
               <img
@@ -380,7 +401,7 @@ const App = () => {
               />
               {currentAccount ? (
                 <p className='public-addr'>
-                  {" "}
+                  
                   Wallet: {currentAccount.slice(0, 6)}...
                   {currentAccount.slice(-4)}{" "}
                 </p>
